@@ -1,0 +1,32 @@
+Links to Sequence Diagrams hosted on Gliffy:
+--------------------------------------------
+
+Admin: Create an Election Page- http://bit.ly/V8wEdp
+
+Admin: Add a new ballot- http://bit.ly/Qj82Oo
+
+Admin: View election results- http://www.gliffy.com/go/publish/3957279/
+
+Voter: Submit ballot- http://bit.ly/Xqi2JC
+
+Voter: View Confirmations selections- http://bit.ly/TdA3My
+
+Voter: View Candidate List for Region- http://bit.ly/REr1CP
+
+Admin: Add list of registered voters- http://bit.ly/TdAp5G
+
+Admin: Register to vote- http://bit.ly/R5j9Nz
+
+Voter: Log in to Direct Elect- http://bit.ly/RHlrTz
+
+Admin: Log in to Direct Elect- http://bit.ly/RUUPfh
+
+Admin: Publish election results- http://bit.ly/OJyOlF
+
+Voter: View Candidate List for Region- http://bit.ly/Xqr1KJ
+
+Voter: Cast Additional Ballots- http://bit.ly/U6uTSi
+
+
+
+
