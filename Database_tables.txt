@@ -1,0 +1,73 @@
+CREATE TABLE Voter (
+    id SERIAL PRIMARY KEY, 
+    fname CHAR(30) NOT NULL,     
+    lname CHAR(30) NOT NULL,    
+    street_address VARCHAR(40) NOT NULL, 
+    city VARCHAR(40) NOT NULL,
+    state VARCHAR(20) NOT NULL,
+    password VARCHAR(60) NOT NULL, 
+    age INTEGER NOT NULL,
+    sex CHAR(1),
+    race VARCHAR(30) NOT NULL,
+    party VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Voter_Admin (
+    id SERIAL PRIMARY KEY, 
+    fname CHAR(30) NOT NULL,     
+    lname CHAR(30) NOT NULL,  
+    street_address VARCHAR(40) NOT NULL, 
+    city VARCHAR(40) NOT NULL,
+    state VARCHAR(20) NOT NULL,
+    password VARCHAR(60) NOT NULL 
+);
+
+CREATE TABLE Candidate (
+    id SERIAL PRIMARY KEY, 
+    fname CHAR(30) NOT NULL,     
+    lname CHAR(30) NOT NULL,  
+    street_address VARCHAR(40) NOT NULL, 
+    city VARCHAR(40) NOT NULL,
+    state VARCHAR(20) NOT NULL,
+    position VARCHAR(60) NOT NULL,
+    party VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Election (
+    election_id SERIAL PRIMARY KEY,       
+    start_time DATE NOT NULL,     
+    end_time DATE NOT NULL    
+);
+
+CREATE TABLE Voter_List (
+    election_id SERIAL PRIMARY KEY,       
+    voter_id SERIAL NOT NULL,     
+    candidate_fname CHAR(30) NOT NULL,    
+    candidate_lname CHAR(30) NOT NULL,    
+    seat VARCHAR(60) NOT NULL  
+);
+
+CREATE TABLE Ballot (
+    election_id SERIAL PRIMARY KEY,            
+    candidate_fname CHAR(30) NOT NULL,    
+    candidate_lname CHAR(30) NOT NULL,    
+    position VARCHAR(60) NOT NULL,
+    party VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Election_Results (
+    election_id SERIAL PRIMARY KEY,            
+    votes_cast BIGINT NOT NULL,
+    candidate_fname CHAR(30) NOT NULL,    
+    candidate_lname CHAR(30) NOT NULL,    
+    position VARCHAR(60) NOT NULL,
+    party VARCHAR(30) NOT NULL
+);
+
+drop table Voter;
+drop table Voter_Admin;
+drop table Candidate;
+drop table Election;
+drop table Voter_List;
+drop table Ballot;
+drop table Election_Results;
