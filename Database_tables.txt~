@@ -6,10 +6,10 @@ CREATE TABLE Voter (
     city VARCHAR(40) NOT NULL,
     state VARCHAR(20) NOT NULL,
     password VARCHAR(60) NOT NULL, 
-    age INTEGER,
+    age INTEGER NOT NULL,
     sex CHAR(1),
-    race VARCHAR(30),
-    party VARCHAR(30)
+    race VARCHAR(30) NOT NULL,
+    party VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE Voter_Admin (
