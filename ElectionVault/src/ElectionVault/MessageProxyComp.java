@@ -20,7 +20,7 @@ public class MessageProxyComp {
        
        //FIXME: this needs to be a new thread, uncomment to recieve message
        //This will block on message queue and hold the entire app right now
-       EstablishConnection();
+       //EstablishConnection();
        
    }
    //This establishes a queue and waits for a message

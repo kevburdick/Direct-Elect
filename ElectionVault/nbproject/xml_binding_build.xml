@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
             *** GENERATED FROM xml_binding_cfg.xml - DO NOT EDIT  ***
             *** Configure thru JAXB Wizard.                       ***
-        --><project name="Consumer_jaxb" default="default" basedir=".">
+        -->
+<project name="Consumer_jaxb" default="default" basedir=".">
     <target name="xjc-typedef-target" depends="-init-project">
         <typedef classname="com.sun.tools.xjc.XJCTask" name="xjc" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig">
             <classpath path="${jaxbwiz.xjcdef.classpath}"/>
@@ -11,19 +13,19 @@
     <target name="jaxb-code-generation" depends="xjc-typedef-target,-do-init,-init-macrodef-javac">
         <mkdir dir="${build.generated.sources.dir}/jaxb" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig"/>
         <mkdir dir="build/generated/jaxbCache" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig"/>
-        <mkdir dir="build/generated/jaxbCache/ConsumerBinding"/>
-        <xjc package="consumer.xml" destdir="build/generated/jaxbCache/ConsumerBinding" catalog="catalog.xml">
+        <mkdir dir="build/generated/jaxbCache/DirectElectBinding"/>
+        <xjc package="directelect.xml" destdir="build/generated/jaxbCache/DirectElectBinding" catalog="catalog.xml">
             <classpath>
                 <pathelement location="${src.dir}"/>
                 <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
             </classpath>
             <arg value="-xmlschema"/>
-            <schema file="xml-resources/jaxb/ConsumerBinding/newXmlSchema.xsd"/>
-            <depends file="xml-resources/jaxb/ConsumerBinding/newXmlSchema.xsd"/>
-            <produces dir="build/generated/jaxbCache/ConsumerBinding"/>
+            <schema file="xml-resources/jaxb/DirectElectBinding/newXmlSchema.xsd"/>
+            <depends file="xml-resources/jaxb/DirectElectBinding/newXmlSchema.xsd"/>
+            <produces dir="build/generated/jaxbCache/DirectElectBinding"/>
         </xjc>
         <copy todir="${build.generated.sources.dir}/jaxb">
-            <fileset dir="build/generated/jaxbCache/ConsumerBinding"/>
+            <fileset dir="build/generated/jaxbCache/DirectElectBinding"/>
         </copy>
     </target>
 </project>

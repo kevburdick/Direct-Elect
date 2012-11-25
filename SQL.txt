@@ -1,0 +1,91 @@
+insert into Voter_Admin (id, fname, lname, street_address, city, state, password) values (1254, 'Stephen', 'Slaughter', '123 Oakland street', 'Philadelphia', 'PA', 'trickypete');
+
+insert into Voter_Admin (id, fname, lname, street_address, city, state, password) values (1255, 'Kevin', 'Burdick', '987 Sabona street', 'Wilderness', 'New Hampshire', 'wonkyfoo');
+
+insert into Voter_Admin (id, fname, lname, street_address, city, state, password) values (1256, 'R.J.', 'Davis', '657 Broad street', 'Philadelphia', 'PA', 'shimyzook12');
+
+insert into Voter_Admin (id, fname, lname, street_address, city, state, password) values (1257, 'Brant', 'Stannert', '1004 Market street', 'Philadelphia', 'PA', 'balugawhale65');
+
+ADMIN Add List of Eligible Voters:
+
+insert into Voter (id, fname, lname, street_address, city, state, password) values (9123, 'Cliff', 'Smith', '6754 Church ave', 'Reading', 'PA', 'welcometomachine56');
+
+insert into Voter (id, fname, lname, street_address, city, state, password) values (9124, 'Stephanie', 'Smith', '6754 Church ave', 'Reading', 'PA', 'mylittlepony43');
+
+insert into Voter (id, fname, lname, street_address, city, state, password) values (9125, 'Willy', 'Wonka', '456 Serpent st', 'Altoona', 'PA', 'slithering756');
+
+insert into Voter (id, fname, lname, street_address, city, state, password) values (9126, 'David', 'Goliath', '748 Helper blvd', 'Cherry Hill', 'NJ', 'topdog76');
+
+ADMIN Add Candidate List:
+
+insert into Candidate (id, fname, lname, street_address, city, state, position, party) values (5768, 'Barack', 'Obama', '839 Inkler drive', 'Chicago', 'IL', 'President', 'Democratic');
+
+insert into Candidate (id, fname, lname, street_address, city, state, position, party) values (5769, 'Mitt', 'Romney', '7685 Polygamy way', 'Alpine', 'UT', 'President', 'Republican');
+
+insert into Candidate (id, fname, lname, street_address, city, state, position, party) values (5770, 'Tony', 'Stark', '111 Ironman way', 'Philadelphia', 'PA', 'Senator', 'Democratic');
+
+insert into Candidate (id, fname, lname, street_address, city, state, position, party) values (5771, 'Chris', 'Christie', '987 Whitey way', 'Philadelphia', 'PA', 'Senator', 'Republican');
+
+insert into Candidate (id, fname, lname, street_address, city, state, position, party) values (5772, 'Bill', 'Gates', '652 Microsoft drive', 'Cherry Hill', 'NJ', 'Mayor', 'Democratic');
+
+insert into Candidate (id, fname, lname, street_address, city, state, position, party) values (5773, 'John', 'Runyan', '1254 Giligan drive', 'Cherry Hill', 'NJ', 'Mayor', 'Republican');
+
+ADMIN Add new Ballot:
+
+insert into Election (election_id, start_time, end_time) values (23649, '', '');
+
+insert into Ballot (election_id, candidate_fname, candidate_lname, position, party) values (23649, 'Barack', 'Obama', 'President', 'Democratic');
+
+insert into Ballot (election_id, candidate_fname, candidate_lname, position, party) values (23649, 'Mitt', 'Romney', 'President', 'Republican');
+
+insert into Ballot (election_id, candidate_fname, candidate_lname, position, party) values (23649, 'Tony', 'Stark', 'Senator', 'Democratic');
+
+insert into Ballot (election_id, candidate_fname, candidate_lname, position, party) values (23649, 'Chris', 'Christie', 'Senator', 'Republican');
+
+insert into Ballot (election_id, candidate_fname, candidate_lname, position, party) values (23649, 'Bill', 'Gates', 'Mayor', 'Democratic');
+
+insert into Ballot (election_id, candidate_fname, candidate_lname, position, party) values (23649, 'John', 'Runyan', 'Mayor', 'Republican');
+
+View Election Results:
+
+requestPollAvailability:
+
+select start_time, end_time from Election where election_id = var;
+
+viewVoteStats:
+
+select votes_cast, position, party, candidate_fname, candidate_lname from Election_Results where election_id = var;
+
+viewTurnoutStats:
+
+select votes_cast from Election_Results where election_id = var;
+
+NOTE: I'm assuming this query will return a list of votes_cast numbers we can add together to find the Turnout number for each election_id.
+
+VOTER Register to Vote:
+
+insert into Voter (id, age, sex, race, party) values (9123, 32, 'Male','White','Republican');
+
+NOTE: replicate this statement to register any voter. Notice only id and missing fields are inserted.
+
+VOTER View Candidate List for Region:
+
+SELECT id, fname, lname, position, party FROM Candidate WHERE city = var AND state = var2;
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

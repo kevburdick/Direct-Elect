@@ -21,7 +21,7 @@ public class ElectionVault {
    static String ELECTVAULT_VERSION = "0.0.0.1";
    static final String LOG_PROPERTIES_FILE = "log4j.properties";
    static int FILE_PROPERTIES_LENGTH = 256;
-   static String DB_HOST="";
+   static String DB_HOST="localhost";
         
    public static void main(String[] args) {
         //start a logger
