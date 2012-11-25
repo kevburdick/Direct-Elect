@@ -22,3 +22,11 @@
 18 Nov 2012 14:10:12,426  WARN VoteComp:19 - VoteComp()
 18 Nov 2012 14:10:12,426  WARN DataBaseProxyComp:18 - DataBaseProxyComp()
 18 Nov 2012 14:10:12,506  WARN MessageProxyComp:19 - MessageProxy()
+19 Nov 2012 00:53:28,224  WARN ElectionVault:32 - ElectVault version:0.0.0.1
+19 Nov 2012 00:53:28,228  WARN ElectionVault:97 - PORT_NAME:COM4
+19 Nov 2012 00:53:28,229  WARN ElectionVault:104 - DB_HOST:localhost:3306/tbd
+19 Nov 2012 00:53:28,229  WARN MediaComp:19 - MediaComp()
+19 Nov 2012 00:53:28,230  WARN MgmtComp:19 - MgmtComp()
+19 Nov 2012 00:53:28,230  WARN VoteComp:19 - VoteComp()
+19 Nov 2012 00:53:28,231  WARN DataBaseProxyComp:18 - DataBaseProxyComp()
+19 Nov 2012 00:53:28,348  WARN MessageProxyComp:19 - MessageProxy()
