@@ -1,12 +1,68 @@
 <?xml version="1.0"?>
-<xs:schema targetNamespace="http://xml.consumer"
+<xs:schema targetNamespace="http://xml.directelect"
            xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-           xmlns:ora="http://xml.consumer">
-  <xs:element name="consumer" type="ora:Consumer"/>
-  <xs:complexType name="hello">
+           xmlns:ora="http://xml.directelect">
+  <xs:import namespace="http://www.w3.org/2001/XMLSchema"/> 
+  <xs:complexType name="Vote">
     <xs:sequence>
-      <xs:element name="id" type="xs:int"/>
-      <xs:element name="message" type="xs:string"/>
+      <xs:element name="msg_id" type="xs:int"/>
+      <xs:element name="election_id" type="xs:int"/>
+      <xs:element name="candidate_fname" type="xs:string" />
+      <xs:element name="candidate_lname" type="xs:string" />
+      <xs:element name="position" type="xs:string" />
+      <xs:element name="party" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EligibleVoter">
+      <xs:sequence>
+      <xs:element name="msg_id" type="xs:int"/>
+      <xs:element name="voter_id" type="xs:int"/>
+      <xs:element name="fname" type="xs:string"/>
+      <xs:element name="lname" type="xs:string"/>
+      <xs:element name="street" type="xs:string"/>
+      <xs:element name="city" type="xs:string"/>
+      <xs:element name="state" type="xs:string"/>
+      <xs:element name="password" type="xs:string"/>
+     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Ballot">
+    <xs:sequence>
+      <xs:element name="msg_id" type="xs:int"/>
+      <xs:element name="election_id" type="xs:int"/>
+      <xs:element name="candidate_fname" type="xs:string"/>
+      <xs:element name="candidate_lname" type="xs:string"/>
+      <xs:element name="position" type="xs:string"/>
+      <xs:element name="party" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Election">
+    <xs:sequence>
+      <xs:element name="msg_id" type="xs:int"/>
+      <xs:element name="election_id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Results">
+    <xs:sequence>
+      <xs:element name="msg_id" type="xs:int"/>
+      <xs:element name="election_id" type="xs:int"/>
+      <xs:element name="votes_cast" type="xs:int"/>
+      <xs:element name="candidate_fname" type="xs:string"/>
+      <xs:element name="candidate_lname" type="xs:string"/>
+      <xs:element name="position" type="xs:string" />
+      <xs:element name="party" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Candidate">
+    <xs:sequence>
+      <xs:element name="msg_id" type="xs:int"/>
+      <xs:element name="candidate_id" type="xs:int"/>
+      <xs:element name="fname" type="xs:string"/>
+      <xs:element name="lname" type="xs:int"/>
+      <xs:element name="street" type="xs:string"/>
+      <xs:element name="city" type="xs:string"/>
+      <xs:element name="state" type="xs:string" />
+      <xs:element name="position" type="xs:string" />
+      <xs:element name="party" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
  </xs:schema>

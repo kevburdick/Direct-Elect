@@ -40,12 +40,14 @@ public class ElectionVault {
             logger.warn("FileNotFound: "+propFile);
         }
         
+        
+
         //once the logger is up and configuration file loaded initialize the 
         //components
         new MediaComp();
-        new MgmtComp();
         new VoteComp();
-        new DataBaseProxyComp();
+        DataBaseProxyComp database = new DataBaseProxyComp();
+        new MgmtComp(database);
         //MessageProxy should be last component initalized so nothing can in 
         //until everything is up
         new MessageProxyComp();
