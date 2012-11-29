@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="UTF-8">
+	
+	<!-- Remove this line if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta name="viewport" content="width=device-width">
+	
+	<meta name="description" content="Designa Studio, a HTML5 / CSS3 template.">
+	<meta name="author" content="Sylvain Lafitte, Web Designer, sylvainlafitte.com">
+	<meta name="author" content="R.J. Davis, UI Developer, DirectDesign">
+	
+	<title>DirectElect - Vote</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+
+<body>
+<!-- Prompt IE 7 users to install Chrome Frame -->
+<!--[if lt IE 8]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<div class="container">
+
+	<header id="navtop">
+		<a href="home.html" class="logo fleft">
+			<img src="images/logo.png" alt="Designa Studio">
+		</a>
+		
+		<nav class="fright">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+			<ul>
+				<li><a href="vote.html" class="navactive">Vote</a></li>
+				<li><a href="electionResults.html">Election Results</a></li>
+			</ul>
+			<ul>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<div class="vote-page main grid-wrap">
+
+		<header class="grid col-full">
+			<hr>
+			<p class="fleft">Vote</p>
+		</header>
+
+
+		<aside class="grid col-one-quarter mq2-col-full">
+			<h4>Instructions</h4>
+			<p class="mbottom">
+				Vote for a candidate by selecting the radio button next to their name. If the candidate you wish to vote for is not on the ballot, choose "Write-In" and enter your candidate's first and last name. Answer any questions on the ballot you would like by selecting the radio button "Yes" if you are in favor and "No" if you are against the proposition. Once you are finished making your selections, hit the "Submit" button to finalize your vote.
+			</p>
+			
+
+		</aside>
+		
+		<section id="ballot" class="grid col-three-quarters mq2-col-full">
+			
+			<aside class="grid col-full noLeftPadding">	
+				<h2 class="noBotMar">State General Election Ballot</h2>
+				<h3>Philadelphia County, Pennsylvania</h3>
+			</aside>
+			
+			<div class="grid col-full noLeftPadding">
+				<h4>Federal Offices</h4>
+				<hr>
+			</hr>
+			
+			<div class="grid col-one-half mq2-col-full selectionBox">
+				<div class="grid col-full quartermbottom noLeftPadding">
+					<h6>President</h6>
+				</div>
+				<div class="grid col-full noLeftPadding">
+					<form class="noTopMar">
+						<input type="radio" name="candidate" value="1">Barrack Obama<br>
+						<input type="radio" name="candidate" value="2">Mitt Romney<br>
+						<input type="radio" name="candidate" value="writeIn0">Write-in:<br>
+
+						<span id="writeInFirstNameLabel0">First Name:</span>
+						<input type="text" name="writeIn0" id="writeInFirstNameInput0" maxlength="20"/>
+						<br>
+						<span id="writeInLastNameLabel0">Last Name:</span>
+						<input type="text" name="writeIn0" id="writeInLastNameInput0" maxlength="20"/>
+					</form>
+				</div>
+			</div>
+			<div class="grid col-one-half mq2-col-full selectionBox">
+				<div class="grid col-full quartermbottom noLeftPadding">
+					<h6>Supreme Court Justice</h6>
+				</div>
+				<div class="grid col-full noLeftPadding">
+					<form class="noTopMar">
+						<input type="radio" name="candidate" value="1">Conservative Guy<br>
+						<input type="radio" name="candidate" value="2">Liberal Guy<br>
+						<input type="radio" name="candidate" value="3">Crazy Guy<br>
+						<input type="radio" name="candidate" value="writeIn0">Write-in:<br>
+
+						<span id="writeInFirstNameLabel1">First Name:</span>
+						<input type="text" name="writeIn1" id="writeInFirstNameInput1" maxlength="20"/>
+						<br>
+						<span id="writeInLastNameLabel1">Last Name:</span>
+						<input type="text" name="writeIn1" id="writeInLastNameInput1" maxlength="20"/>
+					</form>
+				</div>
+			</div>
+			
+			<div class="grid col-full noLeftPadding">
+				<h4>State Offices</h4>
+				<hr>
+			</hr>
+			
+			<div class="grid col-one-half mq2-col-full selectionBox">
+				<div class="grid col-full quartermbottom noLeftPadding">
+					<h6>President</h6>
+				</div>
+				<div class="grid col-full noLeftPadding">
+					<form class="noTopMar">
+						<input type="radio" name="candidate" value="1">Barrack Obama<br>
+						<input type="radio" name="candidate" value="2">Mitt Romney<br>
+						<input type="radio" name="candidate" value="writeIn0">Write-in:<br>
+
+						<span id="writeInFirstNameLabel0">First Name:</span>
+						<input type="text" name="writeIn0" id="writeInFirstNameInput0" maxlength="20"/>
+						<br>
+						<span id="writeInLastNameLabel0">Last Name:</span>
+						<input type="text" name="writeIn0" id="writeInLastNameInput0" maxlength="20"/>
+					</form>
+				</div>
+			</div>
+			<div class="grid col-one-half mq2-col-full selectionBox">
+				<div class="grid col-full quartermbottom noLeftPadding">
+					<h6>Supreme Court Justice</h6>
+				</div>
+				<div class="grid col-full noLeftPadding">
+					<form class="noTopMar">
+						<input type="radio" name="candidate" value="1">Conservative Guy<br>
+						<input type="radio" name="candidate" value="2">Liberal Guy<br>
+						<input type="radio" name="candidate" value="3">Crazy Guy<br>
+						<input type="radio" name="candidate" value="writeIn0">Write-in:<br>
+
+						<span id="writeInFirstNameLabel1">First Name:</span>
+						<input type="text" name="writeIn1" id="writeInFirstNameInput1" maxlength="20"/>
+						<br>
+						<span id="writeInLastNameLabel1">Last Name:</span>
+						<input type="text" name="writeIn1" id="writeInLastNameInput1" maxlength="20"/>
+					</form>
+				</div>
+			</div>
+			<div class="grid col-one-half mq2-col-full selectionBox">
+				<div class="grid col-full quartermbottom noLeftPadding">
+					<h6>Supreme Court Justice</h6>
+				</div>
+				<div class="grid col-full noLeftPadding">
+					<form class="noTopMar">
+						<input type="radio" name="candidate" value="1">Conservative Guy<br>
+						<input type="radio" name="candidate" value="2">Liberal Guy<br>
+						<input type="radio" name="candidate" value="3">Crazy Guy<br>
+						<input type="radio" name="candidate" value="writeIn0">Write-in:<br>
+
+						<span id="writeInFirstNameLabel1">First Name:</span>
+						<input type="text" name="writeIn1" id="writeInFirstNameInput1" maxlength="20"/>
+						<br>
+						<span id="writeInLastNameLabel1">Last Name:</span>
+						<input type="text" name="writeIn1" id="writeInLastNameInput1" maxlength="20"/>
+					</form>
+				</div>
+			</div>
+			<div class="grid col-one-half hideOnMq2 selectionBox">
+				&nbsp;
+			</div>
+			
+			<div class="grid col-full noLeftPadding">
+				<h4>County Offices</h4>
+				<hr>
+			</hr>
+			
+			<div class="grid col-one-half mq2-col-full selectionBox">
+				<div class="grid col-full quartermbottom noLeftPadding">
+					<h6>President</h6>
+				</div>
+				<div class="grid col-full noLeftPadding">
+					<form class="noTopMar">
+						<input type="radio" name="candidate" value="1">Barrack Obama<br>
+						<input type="radio" name="candidate" value="2">Mitt Romney<br>
+						<input type="radio" name="candidate" value="writeIn0">Write-in:<br>
+
+						<span id="writeInFirstNameLabel0">First Name:</span>
+						<input type="text" name="writeIn0" id="writeInFirstNameInput0" maxlength="20"/>
+						<br>
+						<span id="writeInLastNameLabel0">Last Name:</span>
+						<input type="text" name="writeIn0" id="writeInLastNameInput0" maxlength="20"/>
+					</form>
+				</div>
+			</div>
+			<div class="grid col-one-half mq2-col-full selectionBox">
+				<div class="grid col-full quartermbottom noLeftPadding">
+					<h6>Supreme Court Justice</h6>
+				</div>
+				<div class="grid col-full noLeftPadding">
+					<form class="noTopMar">
+						<input type="radio" name="candidate" value="1">Conservative Guy<br>
+						<input type="radio" name="candidate" value="2">Liberal Guy<br>
+						<input type="radio" name="candidate" value="3">Crazy Guy<br>
+						<input type="radio" name="candidate" value="writeIn0">Write-in:<br>
+
+						<span id="writeInFirstNameLabel1">First Name:</span>
+						<input type="text" name="writeIn1" id="writeInFirstNameInput1" maxlength="20"/>
+						<br>
+						<span id="writeInLastNameLabel1">Last Name:</span>
+						<input type="text" name="writeIn1" id="writeInLastNameInput1" maxlength="20"/>
+					</form>
+				</div>
+			</div>
+			<div class="grid col-one-half mq2-col-full selectionBox">
+				<div class="grid col-full quartermbottom noLeftPadding">
+					<h6>Supreme Court Justice</h6>
+				</div>
+				<div class="grid col-full noLeftPadding">
+					<form class="noTopMar">
+						<input type="radio" name="candidate" value="1">Conservative Guy<br>
+						<input type="radio" name="candidate" value="2">Liberal Guy<br>
+						<input type="radio" name="candidate" value="3">Crazy Guy<br>
+						<input type="radio" name="candidate" value="writeIn0">Write-in:<br>
+
+						<span id="writeInFirstNameLabel1">First Name:</span>
+						<input type="text" name="writeIn1" id="writeInFirstNameInput1" maxlength="20"/>
+						<br>
+						<span id="writeInLastNameLabel1">Last Name:</span>
+						<input type="text" name="writeIn1" id="writeInLastNameInput1" maxlength="20"/>
+					</form>
+				</div>
+			</div>
+			<div class="grid col-one-half mq2-col-full selectionBox">
+				<div class="grid col-full quartermbottom noLeftPadding">
+					<h6>Supreme Court Justice</h6>
+				</div>
+				<div class="grid col-full noLeftPadding">
+					<form class="noTopMar">
+						<input type="radio" name="candidate" value="1">Conservative Guy<br>
+						<input type="radio" name="candidate" value="2">Liberal Guy<br>
+						<input type="radio" name="candidate" value="3">Crazy Guy<br>
+						<input type="radio" name="candidate" value="writeIn0">Write-in:<br>
+
+						<span id="writeInFirstNameLabel1">First Name:</span>
+						<input type="text" name="writeIn1" id="writeInFirstNameInput1" maxlength="20"/>
+						<br>
+						<span id="writeInLastNameLabel1">Last Name:</span>
+						<input type="text" name="writeIn1" id="writeInLastNameInput1" maxlength="20"/>
+					</form>
+				</div>
+			</div>
+			<div class="grid col-one-half mq2-col-full selectionBox">
+				<div class="grid col-full quartermbottom noLeftPadding">
+					<h6>Supreme Court Justice</h6>
+				</div>
+				<div class="grid col-full noLeftPadding">
+					<form class="noTopMar">
+						<input type="radio" name="candidate" value="1">Conservative Guy<br>
+						<input type="radio" name="candidate" value="2">Liberal Guy<br>
+						<input type="radio" name="candidate" value="3">Crazy Guy<br>
+						<input type="radio" name="candidate" value="writeIn0">Write-in:<br>
+
+						<span id="writeInFirstNameLabel1">First Name:</span>
+						<input type="text" name="writeIn1" id="writeInFirstNameInput1" maxlength="20"/>
+						<br>
+						<span id="writeInLastNameLabel1">Last Name:</span>
+						<input type="text" name="writeIn1" id="writeInLastNameInput1" maxlength="20"/>
+					</form>
+				</div>
+			</div>
+			
+			<article id="navbutton" class="grid col-full noLeftPadding">
+				<p>
+					<a href="#" class="button">Submit vote</a>
+				</p>
+			</article>
+		
+		</section>	
+		
+		
+		
+		
+	</div> <!--main-->
+
+<div class="divide-top">
+	<footer class="grid-wrap">
+		<div class="up grid col-one-half ">
+			<a href="#navtop" title="Go back up">&uarr;</a>
+		</div>
+		
+		<nav class="grid col-one-half ">
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="vote.html">Vote</a></li>
+				<li><a href="electionResults.html">Election Results</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</footer>
+</div>
+
+</div>
+
+<!-- Javascript - jQuery -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.8.3.js"><\/script>')</script>
+
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script src="js/selectivizr.js"></script>
+<![endif]-->
+
+<script src="js/scripts.js"></script>
+
+</body>
+</html>
