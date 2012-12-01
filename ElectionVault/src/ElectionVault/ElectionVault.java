@@ -44,14 +44,18 @@ public class ElectionVault {
 
         //once the logger is up and configuration file loaded initialize the 
         //components
-        new MediaComp();
-        new VoteComp();
-        DataBaseProxyComp database = new DataBaseProxyComp();
-        new MgmtComp(database);
-        //MessageProxy should be last component initalized so nothing can in 
-        //until everything is up
-        new MessageProxyComp();
+        DataBaseProxyComp database;
+        MessageProxyComp msgProxy;
+        MgmtComp mgmtComp;
+        VoteComp voteComp;
         
+        new MediaComp();
+        database = new DataBaseProxyComp();
+        mgmtComp = new MgmtComp(database);
+        voteComp = new VoteComp(database);
+        msgProxy = new MessageProxyComp(mgmtComp);
+        //MessageProxy should be last component initalized so nothing can in 
+        //until everything is up       
         
     }
     
