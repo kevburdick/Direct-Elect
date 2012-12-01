@@ -32,6 +32,7 @@ public class Request {
     int type = e_invalid;
     int electionID =0;
     String user ="";
+    String password ="";
     int role = r_invalid; 
     
     Vector  candList;//candidate list
@@ -74,6 +75,10 @@ public class Request {
         return true;
     }
     
+    public String getPassword()
+    {
+        return password;
+    }
     /*
      *  This is used for a createBallot Request
      *  
@@ -116,7 +121,8 @@ public class Request {
     {
         criteriaList.add(pCrit);
         return true;
-    }  
+    }
+    
             
 }
 
