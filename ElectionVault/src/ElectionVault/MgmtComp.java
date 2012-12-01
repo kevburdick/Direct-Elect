@@ -7,11 +7,17 @@ package ElectionVault;
 
 import javax.jms.*;
 import org.apache.log4j.Logger;
+
+
     
 public class MgmtComp {
 
    static Logger logger;
    static DataBaseProxyComp database; 
+   static MessageProxyComp msgProxy; 
+   static MgmtComp mgmtComp;
+   
+   static public MgmtComp getReference() {return mgmtComp;};
    
    public MgmtComp(DataBaseProxyComp pDatabase) {
        
@@ -21,28 +27,81 @@ public class MgmtComp {
        database = pDatabase;
        //FIXME this will need to handle incoming  requests
        //readMessage();  
+       mgmtComp = this;
    }
    
    
+   public void processMsg(RequestAccess msg)
+   {
+       Request request=null;
+       logger.debug("readMessage() request access");   
+       request = new Request(Request.e_getPassWord);
+       request.setUserName(msg.getName()); 
+       //FIXME the message needs to be fixed
+       request.setRole(Request.r_Admin);
+       //update to return response
+       if(!database.SendRequest(request))
+           //return false;
+       if(request.getPassword()==msg.getPasssword())
+       {
+           Ack rmsg = new Ack();
+           rmsg.setMsgId(msg.msgId);
+           msgProxy.sendResponse(rmsg);   
+       }
+       else
+       {
+          // Nack rmsg = new Ack();
+         //  rmsg.setMsgId(msg.msgId);
+         //  sendResponse(rmsg);
+       }    
+   }
    
-   public boolean readMessage()
+   
+   public void processMsg(Ballot msg)
+   {
+       Request request=null;
+       logger.debug("readMessage() create ballot");   
+   /*    request = new Request(Request.e_getPassWord);
+       request.setUserName(msg.getName()); 
+       //FIXME the message needs to be fixed
+       request.setRole(Request.r_Admin);
+       if(!database.SendRequest(request))
+           return false;
+       return true;
+       
+   */    
+  /*     logger.debug("readMessage() create ballot");   
+               request = new Request(Request.e_createBallot);
+               request.addCandidate("John doe", address, "Senator", "R"); 
+               break;
+  */     
+       
+   }
+           
+   
+   public boolean readMessage(RequestMsg msg)
    {
        int type=4;
-       //request access = 1
-       //create ballot =2
-       //request voter criteria =3
        Request request=null;
        String address = "8 Pepperell Road Leominster Mass";
+       logger.debug("readMessage() "+msg.get().getClass().getSimpleName());    
        
-       switch(type) {
-           case 1: 
-               logger.debug("readMessage() request access");   
+       if(msg.get().getClass().getSimpleName().matches("RequestAccess")) {
+            logger.debug("readMessage() request access");   
+            RequestAccess access = (RequestAccess) msg.get();
                request = new Request(Request.e_getPassWord);
-               request.setUserName("John doe"); 
+               request.setUserName(access.getName()); 
                request.setRole(Request.r_Admin);
-               //if password response matches message password then 
-               //return ack 
-               break;
+               if(!database.SendRequest(request))
+                    return false;
+               return true;   
+               //Need to compare the passwords
+       }
+       else if(msg.get().getClass().getSimpleName().matches("RequestAccess")){
+           logger.debug("readMessage() create ballot");   
+       }
+           
+       /*
            case 2: 
                logger.debug("readMessage() create ballot");   
                request = new Request(Request.e_createBallot);
@@ -63,6 +122,8 @@ public class MgmtComp {
        }
        if(!database.SendRequest(request))
            return false;
+           * 
+      */
        return true;
    }
     
