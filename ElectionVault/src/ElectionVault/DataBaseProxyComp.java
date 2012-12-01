@@ -38,8 +38,6 @@ public class DataBaseProxyComp {
 			return;
  
 		}
- 
- 
 		connection = null;
  
 		try {
@@ -62,6 +60,16 @@ public class DataBaseProxyComp {
 			System.out.println("Failed to make connection!");
 		}
 	}
+   
+   boolean SendRequest(Request req)
+        {
+            logger.debug("SendRequest"+req.getType());
+            return true;   
+          
+        }
+        
+       
+            
   
     
 }
