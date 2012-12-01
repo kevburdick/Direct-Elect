@@ -4,10 +4,6 @@
  */
 package ElectionVault;
 
-import consumer.xml.Hello;
-import directelect.xml.Election;
-import directelect.xml.EligibleVoter;
-import directelect.xml.Vote;
 import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
